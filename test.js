@@ -23,6 +23,14 @@ const app = new Vue({
             let a = this.tareas[index - 1]
             a.estado = true
             localStorage.setItem('homework-app', JSON.stringify(this.tareas))
+        },
+        changeStadeAll(){
+            let a = this.tareas
+            for(let i = 0; i < a.length; i++){
+               let b = a[i]
+               b.estado = true;
+            }
+            localStorage.setItem('homework-app', JSON.stringify(this.tareas))
         }
     },
     created: function() {
