@@ -15,7 +15,7 @@ const app = new Vue({
                 localStorage.setItem('homework-app', JSON.stringify(this.tareas))
         },
         remove(index){
-            this.tareas.pop()
+            this.tareas.splice(index, 1);
             localStorage.setItem('homework-app', JSON.stringify(this.tareas))
         },
 
